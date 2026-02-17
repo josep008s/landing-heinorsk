@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hei Norsk online — Aprende noruego con quien lo vive</title>
-  <meta name="description" content="La academia de noruego para hispanohablantes. Aprende el idioma real, entiende la cultura desde dentro y nunca te sientas solo en el proceso." />
+  <meta name="description" content="La academia de noruego para hispanohablantes. Idioma real, cultura desde dentro, humor seco incluido. Aprende con quien vive en Noruega." />
   <meta property="og:title" content="Hei Norsk online — Aprende noruego con quien lo vive" />
   <meta property="og:description" content="Noruego real para hispanohablantes. Cultura, humor y comunidad." />
   <meta property="og:image" content="/logo.png" />
@@ -15,162 +15,172 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500&family=Source+Serif+4:ital,wght@1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 
+  <!-- STARS CANVAS -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#" class="nav__logo">Hei Norsk<span class="nav__dot"></span></a>
-      <a href="#signup" class="nav__cta">Suscríbete</a>
+      <a href="#" class="nav__logo">Hei Norsk<span class="dot">.</span></a>
+      <div class="nav__links">
+        <a href="#metodo" class="nav__link">Método</a>
+        <a href="#contenido" class="nav__link">Contenido</a>
+        <a href="#signup" class="nav__cta">Empieza gratis</a>
+      </div>
     </div>
   </nav>
 
   <!-- HERO -->
   <header class="hero" id="hero">
-    <div class="hero__content">
-      <p class="hero__pre">🇳🇴 Academia de noruego para hispanohablantes</p>
-      <h1 class="hero__title">Aprende noruego<br>con quien lo vive</h1>
-      <p class="hero__sub">Idioma real. Cultura desde dentro. Humor seco incluido.</p>
-      <a href="#signup" class="hero__btn">Quiero aprender noruego →</a>
+    <div class="hero__aurora"></div>
+    <div class="hero__inner">
+      <div class="hero__badge reveal">
+        <span class="hero__badge-dot"></span>
+        Academia de noruego para hispanohablantes
+      </div>
+      <h1 class="hero__title reveal">
+        Aprende noruego<br>
+        <span class="hero__title-accent">con quien lo vive</span>
+      </h1>
+      <p class="hero__sub reveal">
+        Idioma real. Cultura desde dentro. Humor seco incluido.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#signup" class="btn btn--primary">Quiero aprender noruego</a>
+        <a href="#metodo" class="btn btn--ghost">Conoce el método</a>
+      </div>
+
+      <!-- Floating word cards -->
+      <div class="hero__cards">
+        <div class="hero__card hero__card--1 reveal">
+          <div class="hero__card-word">Koselig</div>
+          <div class="hero__card-phonetic">/ku-she-li/</div>
+          <div class="hero__card-meaning">Acogedor. Cálido. Esa sensación.</div>
+        </div>
+        <div class="hero__card hero__card--2 reveal">
+          <div class="hero__card-word">Takk for sist</div>
+          <div class="hero__card-meaning">Gracias por la última vez que nos vimos.</div>
+        </div>
+        <div class="hero__card hero__card--3 reveal">
+          <div class="hero__card-word">Ut på tur, aldri sur</div>
+          <div class="hero__card-meaning">Sal de paseo, nunca amargado.</div>
+        </div>
+      </div>
     </div>
-    <div class="hero__visual">
-      <div class="hero__card hero__card--1 reveal">
-        <span class="hero__card-emoji">🏔️</span>
-        <p><strong>Koselig</strong> /ku-she-li/</p>
-        <p class="hero__card-meaning">Acogedor. Cálido. Esa sensación.</p>
-      </div>
-      <div class="hero__card hero__card--2 reveal">
-        <span class="hero__card-emoji">🌊</span>
-        <p><strong>Takk for sist</strong></p>
-        <p class="hero__card-meaning">Gracias por la última vez que nos vimos.</p>
-      </div>
-      <div class="hero__card hero__card--3 reveal">
-        <span class="hero__card-emoji">❄️</span>
-        <p><strong>Ut på tur, aldri sur</strong></p>
-        <p class="hero__card-meaning">Sal de paseo, nunca amargado.</p>
-      </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll reveal">
+      <div class="hero__scroll-line"></div>
     </div>
   </header>
 
-  <!-- WHAT WE DO -->
-  <section class="what" id="que">
-    <div class="what__inner">
-      <h2 class="section-title reveal">No enseñamos noruego de libro.<br>Enseñamos el noruego que se habla.</h2>
-      <p class="what__desc reveal">
-        Hei Norsk online es la academia de noruego diseñada para hispanohablantes.
-        Aprende el idioma real que se habla en la calle, entiende la cultura desde dentro
-        y nunca te sientas solo en el proceso.
-      </p>
+  <!-- STATS BAR -->
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stats__item reveal">
+        <span class="stats__number" data-count="8">0</span><span class="stats__suffix">+</span>
+        <span class="stats__label">series semanales</span>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item reveal">
+        <span class="stats__number" data-count="365">0</span>
+        <span class="stats__label">días de contenido al año</span>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item reveal">
+        <span class="stats__number" data-count="100">0</span><span class="stats__suffix">%</span>
+        <span class="stats__label">en español, desde Noruega</span>
+      </div>
+    </div>
+  </section>
 
-      <div class="pillars">
-        <div class="pillar reveal">
-          <span class="pillar__icon">📖</span>
-          <h3 class="pillar__title">Lenguaje Práctico</h3>
-          <p class="pillar__text">Gramática digerible, pronunciación con trucos reales y la palabra del día que te hace sonar menos turista.</p>
+  <!-- METHOD -->
+  <section class="method" id="metodo">
+    <div class="method__inner">
+      <div class="method__header reveal">
+        <span class="section-tag">Nuestro método</span>
+        <h2 class="section-title">No enseñamos noruego de libro.<br><em>Enseñamos el que se habla.</em></h2>
+        <p class="section-desc">Hei Norsk online es la academia diseñada para hispanohablantes que quieren entender Noruega de verdad — no solo aprobar un examen.</p>
+      </div>
+
+      <div class="method__grid">
+        <div class="method__card reveal">
+          <div class="method__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3 class="method__card-title">Lenguaje práctico</h3>
+          <p class="method__card-text">Gramática digerible, pronunciación con trucos reales y la palabra del día que te hace sonar menos turista.</p>
         </div>
-        <div class="pillar reveal">
-          <span class="pillar__icon">🇳🇴</span>
-          <h3 class="pillar__title">Cultura Viva</h3>
-          <p class="pillar__text">Expresiones que revelan la mentalidad noruega. Mitos desmontados con empatía. Lo que no sale en Duolingo.</p>
+        <div class="method__card reveal">
+          <div class="method__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3 class="method__card-title">Cultura viva</h3>
+          <p class="method__card-text">Expresiones que revelan la mentalidad noruega. Mitos desmontados con empatía. Lo que no sale en Duolingo.</p>
         </div>
-        <div class="pillar reveal">
-          <span class="pillar__icon">🏡</span>
-          <h3 class="pillar__title">Vida en Noruega</h3>
-          <p class="pillar__text">El día a día real: supermercados, trámites, oscuridad, fredagstaco. Sin filtros, con humor.</p>
+        <div class="method__card reveal">
+          <div class="method__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="method__card-title">Vida en Noruega</h3>
+          <p class="method__card-text">El día a día real: supermercados, trámites, oscuridad, fredagstaco. Sin filtros, con humor.</p>
         </div>
-        <div class="pillar reveal">
-          <span class="pillar__icon">🤝</span>
-          <h3 class="pillar__title">Comunidad</h3>
-          <p class="pillar__text">No estás solo. Miles de hispanohablantes aprenden noruego contigo, comparten sus errores y se ríen juntos.</p>
+        <div class="method__card reveal">
+          <div class="method__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="method__card-title">Comunidad</h3>
+          <p class="method__card-text">No estás solo. Miles de hispanohablantes aprenden contigo, comparten errores y se ríen juntos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL PROOF -->
-  <section class="proof">
-    <div class="proof__inner">
-      <h2 class="section-title reveal">Lo que dicen quienes aprenden con nosotros</h2>
-      <div class="testimonials">
-        <blockquote class="testimonial reveal">
-          <p>"Llevaba un año en Noruega sin atreverme a hablar. Hei Norsk me hizo entender que los errores son parte del camino. Hoy pido café en noruego sin pensarlo."</p>
-          <cite>— María, Oslo (2 años en Noruega)</cite>
-        </blockquote>
-        <blockquote class="testimonial reveal">
-          <p>"Mi novio es noruego y su familia solo habla noruego. Gracias a Hei Norsk entiendo los chistes de la cena del viernes. Bueno, casi todos."</p>
-          <cite>— Carlos, Bergen (pareja noruega)</cite>
-        </blockquote>
-        <blockquote class="testimonial reveal">
-          <p>"No vivo en Noruega pero me encanta la cultura nórdica. Hei Norsk me enseña noruego y de paso me explica por qué los noruegos cenan tacos los viernes."</p>
-          <cite>— Diego, Madrid (fan de lo nórdico)</cite>
-        </blockquote>
+  <!-- WEEKLY CONTENT -->
+  <section class="content" id="contenido">
+    <div class="content__inner">
+      <div class="content__header reveal">
+        <span class="section-tag">Contenido semanal</span>
+        <h2 class="section-title">Cada semana, un ritmo<br><em>que te mantiene enganchado.</em></h2>
+        <p class="section-desc">Un calendario pensado para que aprendas sin agobiarte. Cada día tiene su propósito.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- WEEKLY SERIES -->
-  <section class="series" id="contenido">
-    <div class="series__inner">
-      <h2 class="section-title reveal">Cada semana, contenido nuevo</h2>
-      <p class="series__desc reveal">Un calendario pensado para que aprendas sin agobiarte. Cada día tiene su ritmo.</p>
-      <div class="series__grid">
-        <div class="series__item reveal">
-          <span class="series__day">Lunes</span>
-          <span class="series__name">Grammatikk / Myte mandag</span>
-          <span class="series__what">Gramática digerible o mitos desmontados</span>
+      <div class="content__grid">
+        <div class="content__item content__item--featured reveal">
+          <span class="content__day">Lunes</span>
+          <h3 class="content__name">Grammatikk / Myte mandag</h3>
+          <p class="content__desc">Gramática digerible o mitos desmontados. Empiezas la semana con claridad.</p>
+          <div class="content__glow"></div>
         </div>
-        <div class="series__item reveal">
-          <span class="series__day">Mar / Jue</span>
-          <span class="series__name">Norsk uttrykk</span>
-          <span class="series__what">Expresiones con doble traducción</span>
+        <div class="content__item reveal">
+          <span class="content__day">Martes &amp; Jueves</span>
+          <h3 class="content__name">Norsk uttrykk</h3>
+          <p class="content__desc">Expresiones con doble traducción: literal y real.</p>
         </div>
-        <div class="series__item reveal">
-          <span class="series__day">Miércoles</span>
-          <span class="series__name">Uttale-utfordring</span>
-          <span class="series__what">Reto de pronunciación</span>
+        <div class="content__item reveal">
+          <span class="content__day">Miércoles</span>
+          <h3 class="content__name">Uttale-utfordring</h3>
+          <p class="content__desc">Reto de pronunciación. Practica la boca.</p>
         </div>
-        <div class="series__item reveal">
-          <span class="series__day">Viernes</span>
-          <span class="series__name">Fredagstaco 🌮</span>
-          <span class="series__what">Viernes relajado + God helg!</span>
+        <div class="content__item reveal">
+          <span class="content__day">Viernes</span>
+          <h3 class="content__name">Fredagstaco</h3>
+          <p class="content__desc">Viernes relajado. Cultura pop, risas y God helg!</p>
         </div>
-        <div class="series__item reveal">
-          <span class="series__day">Sábado</span>
-          <span class="series__name">Dagens ord</span>
-          <span class="series__what">La palabra del día</span>
+        <div class="content__item reveal">
+          <span class="content__day">Sábado</span>
+          <h3 class="content__name">Dagens ord</h3>
+          <p class="content__desc">La palabra del día. Breve, potente, memorable.</p>
         </div>
-        <div class="series__item reveal">
-          <span class="series__day">Domingo</span>
-          <span class="series__name">Dagbok fra Norge</span>
-          <span class="series__what">Diario desde Noruega</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOR YOU IF -->
-  <section class="foryou">
-    <div class="foryou__inner">
-      <h2 class="section-title reveal">Esto es para ti si...</h2>
-      <div class="foryou__grid">
-        <div class="foryou__card reveal">
-          <p class="foryou__persona">Laura</p>
-          <p class="foryou__situation">Planeas mudarte a Noruega y quieres llegar preparada. Sabes que el inglés abre la puerta, pero el noruego abre el país.</p>
-        </div>
-        <div class="foryou__card reveal">
-          <p class="foryou__persona">Carlos</p>
-          <p class="foryou__situation">Tu pareja es noruega. Quieres entender a su familia, participar en las conversaciones y que tu relación crezca en dos idiomas.</p>
-        </div>
-        <div class="foryou__card reveal">
-          <p class="foryou__persona">María</p>
-          <p class="foryou__situation">Ya vives en Noruega pero sigues en la burbuja del inglés. Llevas tiempo aquí. Es hora de que Noruega sea tuya.</p>
-        </div>
-        <div class="foryou__card reveal">
-          <p class="foryou__persona">Diego</p>
-          <p class="foryou__situation">Te fascina la cultura nórdica. No necesitas un motivo para aprender. La curiosidad ya es suficiente.</p>
+        <div class="content__item reveal">
+          <span class="content__day">Domingo</span>
+          <h3 class="content__name">Dagbok fra Norge</h3>
+          <p class="content__desc">Diario personal desde Noruega. Lo real, sin filtros.</p>
         </div>
       </div>
     </div>
@@ -178,11 +188,14 @@
 
   <!-- CTA / SIGNUP -->
   <section class="signup" id="signup">
+    <div class="signup__aurora"></div>
     <div class="signup__inner">
-      <h2 class="signup__title reveal">Cada semana, un email que te acerca a Noruega</h2>
+      <span class="section-tag section-tag--light reveal">Newsletter gratuita</span>
+      <h2 class="signup__title reveal">
+        Cada semana, un email<br>que te acerca a Noruega
+      </h2>
       <p class="signup__desc reveal">
-        Contenido exclusivo que no publico en redes: anécdotas reales, expresiones que no enseña Duolingo
-        y trucos para sonar menos turista. Gratis. Sin spam. <em>Vi snakkes!</em>
+        Contenido exclusivo que no publico en redes: anécdotas reales, expresiones que no enseña Duolingo y trucos para sonar menos turista. Gratis. Sin spam. <em>Vi snakkes!</em>
       </p>
       <form class="signup__form reveal" id="signup-form" action="#" method="POST">
         <div class="signup__field">
@@ -196,13 +209,13 @@
             aria-label="Tu email"
           />
           <button type="submit" class="signup__btn">
-            <span class="signup__btn-text">Suscribirme</span>
+            <span class="signup__btn-text">Suscribirme gratis</span>
             <span class="signup__btn-loading" hidden>Enviando...</span>
           </button>
         </div>
         <p class="signup__note">Solo noruego real. Cero spam. Te puedes dar de baja cuando quieras.</p>
         <p class="signup__success" id="signup-success" hidden>
-          ¡Hei! 🇳🇴 Ya estás dentro. Revisa tu email — tu primer contenido exclusivo está en camino.
+          ¡Hei! Ya estás dentro. Revisa tu email — tu primer contenido exclusivo está en camino.
         </p>
         <p class="signup__error" id="signup-error" hidden>
           Algo salió mal. Inténtalo de nuevo o escríbenos directamente.
@@ -214,16 +227,20 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__brand">
-        <p class="footer__logo">Hei Norsk<span class="nav__dot"></span></p>
-        <p class="footer__tagline">Aprende noruego con quien lo vive</p>
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__logo">Hei Norsk<span class="dot">.</span></p>
+          <p class="footer__tagline">Aprende noruego con quien lo vive</p>
+        </div>
+        <div class="footer__links">
+          <a href="https://instagram.com/heinorskonline" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/@heinorskonline" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://threads.net/@heinorskonline" target="_blank" rel="noopener">Threads</a>
+        </div>
       </div>
-      <div class="footer__links">
-        <a href="https://instagram.com/heinorskonline" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-        <a href="https://tiktok.com/@heinorskonline" target="_blank" rel="noopener" aria-label="TikTok">TikTok</a>
-        <a href="https://threads.net/@heinorskonline" target="_blank" rel="noopener" aria-label="Threads">Threads</a>
+      <div class="footer__bottom">
+        <p class="footer__copy">Start med "Hei". Føl deg hjemme.</p>
       </div>
-      <p class="footer__copy">Start med "Hei". Føl deg hjemme.</p>
     </div>
   </footer>
 
