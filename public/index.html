@@ -15,13 +15,10 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-
-  <!-- STARS CANVAS -->
-  <canvas id="stars" aria-hidden="true"></canvas>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
@@ -37,63 +34,60 @@
 
   <!-- HERO -->
   <header class="hero" id="hero">
-    <div class="hero__aurora"></div>
+    <div class="hero__bg"></div>
     <div class="hero__inner">
-      <div class="hero__badge reveal">
-        <span class="hero__badge-dot"></span>
-        Academia de noruego para hispanohablantes
-      </div>
+      <p class="hero__eyebrow reveal">Academia de noruego para hispanohablantes</p>
       <h1 class="hero__title reveal">
         Aprende noruego<br>
-        <span class="hero__title-accent">con quien lo vive</span>
+        <span class="hero__title-accent">con quien lo vive.</span>
       </h1>
       <p class="hero__sub reveal">
         Idioma real. Cultura desde dentro. Humor seco incluido.
       </p>
       <div class="hero__actions reveal">
         <a href="#signup" class="btn btn--primary">Quiero aprender noruego</a>
-        <a href="#metodo" class="btn btn--ghost">Conoce el método</a>
-      </div>
-
-      <!-- Floating word cards -->
-      <div class="hero__cards">
-        <div class="hero__card hero__card--1 reveal">
-          <div class="hero__card-word">Koselig</div>
-          <div class="hero__card-phonetic">/ku-she-li/</div>
-          <div class="hero__card-meaning">Acogedor. Cálido. Esa sensación.</div>
-        </div>
-        <div class="hero__card hero__card--2 reveal">
-          <div class="hero__card-word">Takk for sist</div>
-          <div class="hero__card-meaning">Gracias por la última vez que nos vimos.</div>
-        </div>
-        <div class="hero__card hero__card--3 reveal">
-          <div class="hero__card-word">Ut på tur, aldri sur</div>
-          <div class="hero__card-meaning">Sal de paseo, nunca amargado.</div>
-        </div>
+        <a href="#metodo" class="btn btn--glass">Conoce el método</a>
       </div>
     </div>
 
-    <!-- Scroll indicator -->
+    <!-- Floating word cards -->
+    <div class="hero__cards">
+      <div class="glass-card glass-card--float reveal" data-tilt>
+        <p class="glass-card__word">Koselig</p>
+        <p class="glass-card__phonetic">/ku-she-li/</p>
+        <p class="glass-card__meaning">Acogedor. Cálido. Esa sensación.</p>
+      </div>
+      <div class="glass-card glass-card--float reveal" data-tilt>
+        <p class="glass-card__word">Takk for sist</p>
+        <p class="glass-card__meaning">Gracias por la última vez que nos vimos.</p>
+      </div>
+      <div class="glass-card glass-card--float reveal" data-tilt>
+        <p class="glass-card__word">Ut på tur, aldri sur</p>
+        <p class="glass-card__meaning">Sal de paseo, nunca amargado.</p>
+      </div>
+    </div>
+
     <div class="hero__scroll reveal">
-      <div class="hero__scroll-line"></div>
+      <svg width="20" height="30" viewBox="0 0 20 30" fill="none">
+        <rect x="1" y="1" width="18" height="28" rx="9" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
+        <circle class="hero__scroll-dot" cx="10" cy="8" r="2" fill="currentColor" opacity=".5"/>
+      </svg>
     </div>
   </header>
 
-  <!-- STATS BAR -->
+  <!-- STATS -->
   <section class="stats">
     <div class="stats__inner">
       <div class="stats__item reveal">
-        <span class="stats__number" data-count="8">0</span><span class="stats__suffix">+</span>
+        <span class="stats__number" data-count="8">0</span><span class="stats__plus">+</span>
         <span class="stats__label">series semanales</span>
       </div>
-      <div class="stats__divider"></div>
       <div class="stats__item reveal">
         <span class="stats__number" data-count="365">0</span>
         <span class="stats__label">días de contenido al año</span>
       </div>
-      <div class="stats__divider"></div>
       <div class="stats__item reveal">
-        <span class="stats__number" data-count="100">0</span><span class="stats__suffix">%</span>
+        <span class="stats__number" data-count="100">0</span><span class="stats__plus">%</span>
         <span class="stats__label">en español, desde Noruega</span>
       </div>
     </div>
@@ -103,94 +97,92 @@
   <section class="method" id="metodo">
     <div class="method__inner">
       <div class="method__header reveal">
-        <span class="section-tag">Nuestro método</span>
-        <h2 class="section-title">No enseñamos noruego de libro.<br><em>Enseñamos el que se habla.</em></h2>
-        <p class="section-desc">Hei Norsk online es la academia diseñada para hispanohablantes que quieren entender Noruega de verdad — no solo aprobar un examen.</p>
+        <p class="tag">Nuestro método</p>
+        <h2 class="method__title">No enseñamos noruego de libro.<br><em>Enseñamos el que se habla.</em></h2>
+        <p class="method__desc">La academia diseñada para hispanohablantes que quieren entender Noruega de verdad — no solo aprobar un examen.</p>
       </div>
 
       <div class="method__grid">
-        <div class="method__card reveal">
-          <div class="method__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        <div class="glass-card reveal">
+          <div class="glass-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h3 class="method__card-title">Lenguaje práctico</h3>
-          <p class="method__card-text">Gramática digerible, pronunciación con trucos reales y la palabra del día que te hace sonar menos turista.</p>
+          <h3 class="glass-card__title">Lenguaje práctico</h3>
+          <p class="glass-card__text">Gramática digerible, pronunciación con trucos reales y la palabra del día que te hace sonar menos turista.</p>
         </div>
-        <div class="method__card reveal">
-          <div class="method__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <div class="glass-card reveal">
+          <div class="glass-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
           </div>
-          <h3 class="method__card-title">Cultura viva</h3>
-          <p class="method__card-text">Expresiones que revelan la mentalidad noruega. Mitos desmontados con empatía. Lo que no sale en Duolingo.</p>
+          <h3 class="glass-card__title">Cultura viva</h3>
+          <p class="glass-card__text">Expresiones que revelan la mentalidad noruega. Mitos desmontados con empatía. Lo que no sale en Duolingo.</p>
         </div>
-        <div class="method__card reveal">
-          <div class="method__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="glass-card reveal">
+          <div class="glass-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
-          <h3 class="method__card-title">Vida en Noruega</h3>
-          <p class="method__card-text">El día a día real: supermercados, trámites, oscuridad, fredagstaco. Sin filtros, con humor.</p>
+          <h3 class="glass-card__title">Vida en Noruega</h3>
+          <p class="glass-card__text">El día a día real: supermercados, trámites, oscuridad, fredagstaco. Sin filtros, con humor.</p>
         </div>
-        <div class="method__card reveal">
-          <div class="method__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="glass-card reveal">
+          <div class="glass-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 class="method__card-title">Comunidad</h3>
-          <p class="method__card-text">No estás solo. Miles de hispanohablantes aprenden contigo, comparten errores y se ríen juntos.</p>
+          <h3 class="glass-card__title">Comunidad</h3>
+          <p class="glass-card__text">No estás solo. Miles de hispanohablantes aprenden contigo, comparten errores y se ríen juntos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WEEKLY CONTENT -->
+  <!-- CONTENT CALENDAR -->
   <section class="content" id="contenido">
     <div class="content__inner">
       <div class="content__header reveal">
-        <span class="section-tag">Contenido semanal</span>
-        <h2 class="section-title">Cada semana, un ritmo<br><em>que te mantiene enganchado.</em></h2>
-        <p class="section-desc">Un calendario pensado para que aprendas sin agobiarte. Cada día tiene su propósito.</p>
+        <p class="tag">Contenido semanal</p>
+        <h2 class="content__title">Cada semana, un ritmo<br><em>que te mantiene enganchado.</em></h2>
+        <p class="content__desc">Un calendario pensado para que aprendas sin agobiarte. Cada día tiene su propósito.</p>
       </div>
 
       <div class="content__grid">
-        <div class="content__item content__item--featured reveal">
-          <span class="content__day">Lunes</span>
-          <h3 class="content__name">Grammatikk / Myte mandag</h3>
-          <p class="content__desc">Gramática digerible o mitos desmontados. Empiezas la semana con claridad.</p>
-          <div class="content__glow"></div>
+        <div class="glass-card glass-card--accent reveal">
+          <span class="glass-card__day">Lunes</span>
+          <h3 class="glass-card__title">Grammatikk / Myte mandag</h3>
+          <p class="glass-card__text">Gramática digerible o mitos desmontados. Empiezas la semana con claridad.</p>
         </div>
-        <div class="content__item reveal">
-          <span class="content__day">Martes &amp; Jueves</span>
-          <h3 class="content__name">Norsk uttrykk</h3>
-          <p class="content__desc">Expresiones con doble traducción: literal y real.</p>
+        <div class="glass-card reveal">
+          <span class="glass-card__day">Martes &amp; Jueves</span>
+          <h3 class="glass-card__title">Norsk uttrykk</h3>
+          <p class="glass-card__text">Expresiones con doble traducción: literal y real.</p>
         </div>
-        <div class="content__item reveal">
-          <span class="content__day">Miércoles</span>
-          <h3 class="content__name">Uttale-utfordring</h3>
-          <p class="content__desc">Reto de pronunciación. Practica la boca.</p>
+        <div class="glass-card reveal">
+          <span class="glass-card__day">Miércoles</span>
+          <h3 class="glass-card__title">Uttale-utfordring</h3>
+          <p class="glass-card__text">Reto de pronunciación. Practica la boca.</p>
         </div>
-        <div class="content__item reveal">
-          <span class="content__day">Viernes</span>
-          <h3 class="content__name">Fredagstaco</h3>
-          <p class="content__desc">Viernes relajado. Cultura pop, risas y God helg!</p>
+        <div class="glass-card reveal">
+          <span class="glass-card__day">Viernes</span>
+          <h3 class="glass-card__title">Fredagstaco</h3>
+          <p class="glass-card__text">Viernes relajado. Cultura pop, risas y God helg!</p>
         </div>
-        <div class="content__item reveal">
-          <span class="content__day">Sábado</span>
-          <h3 class="content__name">Dagens ord</h3>
-          <p class="content__desc">La palabra del día. Breve, potente, memorable.</p>
+        <div class="glass-card reveal">
+          <span class="glass-card__day">Sábado</span>
+          <h3 class="glass-card__title">Dagens ord</h3>
+          <p class="glass-card__text">La palabra del día. Breve, potente, memorable.</p>
         </div>
-        <div class="content__item reveal">
-          <span class="content__day">Domingo</span>
-          <h3 class="content__name">Dagbok fra Norge</h3>
-          <p class="content__desc">Diario personal desde Noruega. Lo real, sin filtros.</p>
+        <div class="glass-card reveal">
+          <span class="glass-card__day">Domingo</span>
+          <h3 class="glass-card__title">Dagbok fra Norge</h3>
+          <p class="glass-card__text">Diario personal desde Noruega. Lo real, sin filtros.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA / SIGNUP -->
+  <!-- SIGNUP -->
   <section class="signup" id="signup">
-    <div class="signup__aurora"></div>
     <div class="signup__inner">
-      <span class="section-tag section-tag--light reveal">Newsletter gratuita</span>
+      <p class="tag reveal">Newsletter gratuita</p>
       <h2 class="signup__title reveal">
         Cada semana, un email<br>que te acerca a Noruega
       </h2>
@@ -199,27 +191,15 @@
       </p>
       <form class="signup__form reveal" id="signup-form" action="#" method="POST">
         <div class="signup__field">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="tu@email.com"
-            required
-            autocomplete="email"
-            aria-label="Tu email"
-          />
-          <button type="submit" class="signup__btn">
+          <input type="email" name="email" id="email" placeholder="tu@email.com" required autocomplete="email" aria-label="Tu email" />
+          <button type="submit" class="btn btn--primary signup__btn">
             <span class="signup__btn-text">Suscribirme gratis</span>
             <span class="signup__btn-loading" hidden>Enviando...</span>
           </button>
         </div>
         <p class="signup__note">Solo noruego real. Cero spam. Te puedes dar de baja cuando quieras.</p>
-        <p class="signup__success" id="signup-success" hidden>
-          ¡Hei! Ya estás dentro. Revisa tu email — tu primer contenido exclusivo está en camino.
-        </p>
-        <p class="signup__error" id="signup-error" hidden>
-          Algo salió mal. Inténtalo de nuevo o escríbenos directamente.
-        </p>
+        <p class="signup__success" id="signup-success" hidden>¡Hei! Ya estás dentro. Revisa tu email — tu primer contenido exclusivo está en camino.</p>
+        <p class="signup__error" id="signup-error" hidden>Algo salió mal. Inténtalo de nuevo.</p>
       </form>
     </div>
   </section>

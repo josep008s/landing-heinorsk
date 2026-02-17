@@ -1,72 +1,12 @@
 /* ===================================================
-   Hei Norsk online — Premium Arctic Landing Scripts
+   Hei Norsk online — Apple-style Reactive Scripts
    =================================================== */
 
 ;(function () {
   'use strict';
 
   /* -------------------------------------------------
-     1. STARS — animated background
-     ------------------------------------------------- */
-  function initStars() {
-    var canvas = document.getElementById('stars');
-    if (!canvas) return;
-    var ctx = canvas.getContext('2d');
-    var stars = [];
-    var count = 120;
-    var dpr = window.devicePixelRatio || 1;
-
-    function resize() {
-      canvas.width  = window.innerWidth * dpr;
-      canvas.height = window.innerHeight * dpr;
-      canvas.style.width  = window.innerWidth + 'px';
-      canvas.style.height = window.innerHeight + 'px';
-      ctx.scale(dpr, dpr);
-    }
-
-    function createStars() {
-      stars = [];
-      for (var i = 0; i < count; i++) {
-        stars.push({
-          x: Math.random() * window.innerWidth,
-          y: Math.random() * window.innerHeight,
-          r: Math.random() * 1.2 + 0.3,
-          alpha: Math.random() * 0.6 + 0.1,
-          speed: Math.random() * 0.0008 + 0.0003,
-          phase: Math.random() * Math.PI * 2
-        });
-      }
-    }
-
-    function draw(t) {
-      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-      for (var i = 0; i < stars.length; i++) {
-        var s = stars[i];
-        var a = s.alpha * (0.5 + 0.5 * Math.sin(t * s.speed + s.phase));
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(200,214,229,' + a.toFixed(3) + ')';
-        ctx.fill();
-      }
-      requestAnimationFrame(draw);
-    }
-
-    resize();
-    createStars();
-    requestAnimationFrame(draw);
-
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function () {
-        resize();
-        createStars();
-      }, 200);
-    }, { passive: true });
-  }
-
-  /* -------------------------------------------------
-     2. REVEAL — IntersectionObserver with stagger
+     1. REVEAL — IntersectionObserver with stagger
      ------------------------------------------------- */
   function initReveals() {
     var els = document.querySelectorAll('.reveal');
@@ -77,16 +17,14 @@
       return;
     }
 
-    var delay = 0;
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            // Stagger siblings
             var parent = entry.target.parentElement;
             var siblings = parent ? parent.querySelectorAll('.reveal') : [];
             var idx = Array.prototype.indexOf.call(siblings, entry.target);
-            var stagger = Math.max(0, idx) * 80;
+            var stagger = Math.max(0, idx) * 90;
 
             setTimeout(function () {
               entry.target.classList.add('visible');
@@ -96,14 +34,14 @@
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
 
     els.forEach(function (el) { observer.observe(el); });
   }
 
   /* -------------------------------------------------
-     3. NAV — scroll state
+     2. NAV — frosted glass scroll state
      ------------------------------------------------- */
   function initNav() {
     var nav = document.getElementById('nav');
@@ -122,7 +60,7 @@
   }
 
   /* -------------------------------------------------
-     4. SMOOTH SCROLL
+     3. SMOOTH SCROLL
      ------------------------------------------------- */
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(function (a) {
@@ -139,7 +77,7 @@
   }
 
   /* -------------------------------------------------
-     5. COUNTER — animated number count
+     4. COUNTER — animated number count
      ------------------------------------------------- */
   function initCounters() {
     var counters = document.querySelectorAll('[data-count]');
@@ -163,13 +101,12 @@
 
     function animateCounter(el) {
       var target = parseInt(el.dataset.count, 10);
-      var duration = 1800;
+      var duration = 1600;
       var start = null;
 
       function step(ts) {
         if (!start) start = ts;
         var progress = Math.min((ts - start) / duration, 1);
-        // Ease out cubic
         var eased = 1 - Math.pow(1 - progress, 3);
         el.textContent = Math.round(eased * target);
         if (progress < 1) requestAnimationFrame(step);
@@ -179,7 +116,51 @@
   }
 
   /* -------------------------------------------------
-     6. FORM — email signup
+     5. GLASS CARD TILT — reactive mouse effect
+     ------------------------------------------------- */
+  function initTilt() {
+    var cards = document.querySelectorAll('[data-tilt]');
+    if (!cards.length || window.matchMedia('(hover: none)').matches) return;
+
+    cards.forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var rect = card.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width;
+        var y = (e.clientY - rect.top) / rect.height;
+        var rotateX = (y - 0.5) * -8;
+        var rotateY = (x - 0.5) * 8;
+        card.style.transform = 'perspective(600px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-6px)';
+      });
+
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  /* -------------------------------------------------
+     6. PARALLAX — subtle bg movement
+     ------------------------------------------------- */
+  function initParallax() {
+    var bg = document.querySelector('.hero__bg');
+    if (!bg || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          var scrolled = window.scrollY;
+          var rate = scrolled * 0.25;
+          bg.style.transform = 'translateY(' + rate + 'px) scale(1.02)';
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+  /* -------------------------------------------------
+     7. FORM — email signup
      ------------------------------------------------- */
   function initForm() {
     var form = document.getElementById('signup-form');
@@ -206,7 +187,6 @@
       if (btnLoading) btnLoading.hidden = false;
       if (error) error.hidden = true;
 
-      // Simulate send (replace with real endpoint)
       setTimeout(function () {
         if (btnText) btnText.hidden = false;
         if (btnLoading) btnLoading.hidden = true;
@@ -227,14 +207,15 @@
   }
 
   /* -------------------------------------------------
-     7. INIT
+     8. INIT
      ------------------------------------------------- */
   function init() {
-    initStars();
     initReveals();
     initNav();
     initSmoothScroll();
     initCounters();
+    initTilt();
+    initParallax();
     initForm();
   }
 
