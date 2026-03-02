@@ -1,6 +1,10 @@
 {
-  "name": "landing-heinorsk",
-  "version": "1.0.0",
-  "description": "Hei Norsk online — Aprende noruego con quien lo vive",
-  "private": true
+  "name": "hei-norsk-online-landing",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Landing page de captación — Hei Norsk Online",
+  "scripts": {
+    "dev": "npx serve public",
+    "preview": "npx serve public -l 3000"
+  }
 }

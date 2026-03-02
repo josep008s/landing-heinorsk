@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hei Norsk online — Aprende noruego con quien lo vive</title>
-  <meta name="description" content="La academia de noruego para hispanohablantes. Idioma real, cultura desde dentro, humor seco incluido. Aprende con quien vive en Noruega." />
+  <meta name="description" content="La academia de noruego diseñada para hispanohablantes. Idioma real, cultura desde dentro, comunidad que te acompaña. Empieza gratis." />
   <meta property="og:title" content="Hei Norsk online — Aprende noruego con quien lo vive" />
-  <meta property="og:description" content="Noruego real para hispanohablantes. Cultura, humor y comunidad." />
+  <meta property="og:description" content="Noruego real para hispanohablantes. Cultura, humor y comunidad desde Noruega." />
   <meta property="og:image" content="/logo.png" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -15,212 +15,201 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#" class="nav__logo">Hei Norsk<span class="dot">.</span></a>
-      <div class="nav__links">
-        <a href="#metodo" class="nav__link">Método</a>
-        <a href="#contenido" class="nav__link">Contenido</a>
-        <a href="#signup" class="nav__cta">Empieza gratis</a>
-      </div>
+    <div class="nav-inner">
+      <a href="#" class="logo">Hei Norsk<span class="logo-dot">.</span></a>
+      <a href="#signup" class="nav-cta">Empieza gratis</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <header class="hero" id="hero">
-    <div class="hero__bg"></div>
-    <div class="hero__inner">
-      <p class="hero__eyebrow reveal">Academia de noruego para hispanohablantes</p>
-      <h1 class="hero__title reveal">
-        Aprende noruego<br>
-        <span class="hero__title-accent">con quien lo vive.</span>
+    <div class="hero-aurora" id="aurora"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">La academia de noruego para hispanohablantes</p>
+      <h1 class="hero-title reveal">
+        Aprende el noruego<br>
+        <span class="hero-accent">que se habla en la calle.</span>
       </h1>
-      <p class="hero__sub reveal">
-        Idioma real. Cultura desde dentro. Humor seco incluido.
+      <p class="hero-sub reveal">
+        No el de los manuales. El real.<br>
+        Explicado en español, desde Noruega.
       </p>
-      <div class="hero__actions reveal">
-        <a href="#signup" class="btn btn--primary">Quiero aprender noruego</a>
-        <a href="#metodo" class="btn btn--glass">Conoce el método</a>
+      <div class="hero-ctas reveal">
+        <a href="#signup" class="btn btn-primary">Quiero empezar gratis</a>
       </div>
     </div>
-
-    <!-- Floating word cards -->
-    <div class="hero__cards">
-      <div class="glass-card glass-card--float reveal" data-tilt>
-        <p class="glass-card__word">Koselig</p>
-        <p class="glass-card__phonetic">/ku-she-li/</p>
-        <p class="glass-card__meaning">Acogedor. Cálido. Esa sensación.</p>
-      </div>
-      <div class="glass-card glass-card--float reveal" data-tilt>
-        <p class="glass-card__word">Takk for sist</p>
-        <p class="glass-card__meaning">Gracias por la última vez que nos vimos.</p>
-      </div>
-      <div class="glass-card glass-card--float reveal" data-tilt>
-        <p class="glass-card__word">Ut på tur, aldri sur</p>
-        <p class="glass-card__meaning">Sal de paseo, nunca amargado.</p>
-      </div>
+    <div class="hero-words">
+      <span class="floating-word reveal" style="--delay:.1s"><strong>Koselig</strong> — acogedor</span>
+      <span class="floating-word reveal" style="--delay:.3s"><strong>Hei</strong> — hola</span>
+      <span class="floating-word reveal" style="--delay:.5s"><strong>Takk</strong> — gracias</span>
     </div>
-
-    <div class="hero__scroll reveal">
-      <svg width="20" height="30" viewBox="0 0 20 30" fill="none">
-        <rect x="1" y="1" width="18" height="28" rx="9" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
-        <circle class="hero__scroll-dot" cx="10" cy="8" r="2" fill="currentColor" opacity=".5"/>
+    <div class="scroll-hint reveal">
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <rect x=".75" y=".75" width="14.5" height="22.5" rx="7.25" stroke="currentColor" stroke-width="1.5" opacity=".25"/>
+        <circle class="scroll-dot" cx="8" cy="7" r="1.5" fill="currentColor" opacity=".4"/>
       </svg>
     </div>
   </header>
 
-  <!-- STATS -->
-  <section class="stats">
-    <div class="stats__inner">
-      <div class="stats__item reveal">
-        <span class="stats__number" data-count="8">0</span><span class="stats__plus">+</span>
-        <span class="stats__label">series semanales</span>
+  <!-- PAIN -->
+  <section class="pain">
+    <div class="container">
+      <h2 class="section-title reveal">¿Te suena?</h2>
+      <div class="pain-grid">
+        <div class="pain-item reveal">
+          <span class="pain-emoji">😅</span>
+          <p>Asientes cuando no entiendes nada</p>
+        </div>
+        <div class="pain-item reveal">
+          <span class="pain-emoji">📱</span>
+          <p>Dependes de Google Translate para cada carta</p>
+        </div>
+        <div class="pain-item reveal">
+          <span class="pain-emoji">🧊</span>
+          <p>Sientes un techo invisible en el trabajo</p>
+        </div>
+        <div class="pain-item reveal">
+          <span class="pain-emoji">👵</span>
+          <p>Tu suegra te habla y sonríes sin entender</p>
+        </div>
       </div>
-      <div class="stats__item reveal">
-        <span class="stats__number" data-count="365">0</span>
-        <span class="stats__label">días de contenido al año</span>
-      </div>
-      <div class="stats__item reveal">
-        <span class="stats__number" data-count="100">0</span><span class="stats__plus">%</span>
-        <span class="stats__label">en español, desde Noruega</span>
-      </div>
+      <p class="pain-close reveal">
+        Si te reconoces en al menos una, estás en el sitio correcto.
+      </p>
     </div>
   </section>
 
   <!-- METHOD -->
   <section class="method" id="metodo">
-    <div class="method__inner">
-      <div class="method__header reveal">
-        <p class="tag">Nuestro método</p>
-        <h2 class="method__title">No enseñamos noruego de libro.<br><em>Enseñamos el que se habla.</em></h2>
-        <p class="method__desc">La academia diseñada para hispanohablantes que quieren entender Noruega de verdad — no solo aprobar un examen.</p>
-      </div>
-
-      <div class="method__grid">
-        <div class="glass-card reveal">
-          <div class="glass-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    <div class="container">
+      <p class="tag reveal">Nuestro método</p>
+      <h2 class="section-title reveal">
+        No enseñamos noruego de libro.<br>
+        <em>Enseñamos el que se habla.</em>
+      </h2>
+      <div class="method-grid">
+        <div class="method-card reveal">
+          <div class="method-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h3 class="glass-card__title">Lenguaje práctico</h3>
-          <p class="glass-card__text">Gramática digerible, pronunciación con trucos reales y la palabra del día que te hace sonar menos turista.</p>
+          <h3>Idioma real</h3>
+          <p>El noruego de la calle, no el del examen. Gramática digerible, pronunciación con trucos, vocabulario que usarás mañana.</p>
         </div>
-        <div class="glass-card reveal">
-          <div class="glass-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <div class="method-card reveal">
+          <div class="method-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
           </div>
-          <h3 class="glass-card__title">Cultura viva</h3>
-          <p class="glass-card__text">Expresiones que revelan la mentalidad noruega. Mitos desmontados con empatía. Lo que no sale en Duolingo.</p>
+          <h3>Cultura viva</h3>
+          <p>Expresiones que revelan la mentalidad noruega. Mitos desmontados. Lo que no sale en Duolingo.</p>
         </div>
-        <div class="glass-card reveal">
-          <div class="glass-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="method-card reveal">
+          <div class="method-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 class="glass-card__title">Vida en Noruega</h3>
-          <p class="glass-card__text">El día a día real: supermercados, trámites, oscuridad, fredagstaco. Sin filtros, con humor.</p>
-        </div>
-        <div class="glass-card reveal">
-          <div class="glass-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 class="glass-card__title">Comunidad</h3>
-          <p class="glass-card__text">No estás solo. Miles de hispanohablantes aprenden contigo, comparten errores y se ríen juntos.</p>
+          <h3>Comunidad</h3>
+          <p>No estás solo. Hispanohablantes aprendiendo juntos, compartiendo errores y riéndose juntos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTENT CALENDAR -->
-  <section class="content" id="contenido">
-    <div class="content__inner">
-      <div class="content__header reveal">
-        <p class="tag">Contenido semanal</p>
-        <h2 class="content__title">Cada semana, un ritmo<br><em>que te mantiene enganchado.</em></h2>
-        <p class="content__desc">Un calendario pensado para que aprendas sin agobiarte. Cada día tiene su propósito.</p>
+  <!-- LEAD MAGNET -->
+  <section class="offer">
+    <div class="container">
+      <p class="tag reveal">Empieza hoy, gratis</p>
+      <h2 class="section-title reveal">Al suscribirte recibes:</h2>
+      <div class="offer-grid">
+        <div class="offer-item reveal">
+          <span class="offer-number">01</span>
+          <h3>Clase en vídeo</h3>
+          <p>Noruego de supervivencia — las 20 frases que necesitas desde el día uno.</p>
+        </div>
+        <div class="offer-item reveal">
+          <span class="offer-number">02</span>
+          <h3>Guía PDF</h3>
+          <p>Las 10 trampas del noruego que nadie te explica y cómo evitarlas.</p>
+        </div>
+        <div class="offer-item reveal">
+          <span class="offer-number">03</span>
+          <h3>Newsletter diaria</h3>
+          <p>Un email al día: palabra del día, expresiones reales, gramática sin dolor.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="content__grid">
-        <div class="glass-card glass-card--accent reveal">
-          <span class="glass-card__day">Lunes</span>
-          <h3 class="glass-card__title">Grammatikk / Myte mandag</h3>
-          <p class="glass-card__text">Gramática digerible o mitos desmontados. Empiezas la semana con claridad.</p>
-        </div>
-        <div class="glass-card reveal">
-          <span class="glass-card__day">Martes &amp; Jueves</span>
-          <h3 class="glass-card__title">Norsk uttrykk</h3>
-          <p class="glass-card__text">Expresiones con doble traducción: literal y real.</p>
-        </div>
-        <div class="glass-card reveal">
-          <span class="glass-card__day">Miércoles</span>
-          <h3 class="glass-card__title">Uttale-utfordring</h3>
-          <p class="glass-card__text">Reto de pronunciación. Practica la boca.</p>
-        </div>
-        <div class="glass-card reveal">
-          <span class="glass-card__day">Viernes</span>
-          <h3 class="glass-card__title">Fredagstaco</h3>
-          <p class="glass-card__text">Viernes relajado. Cultura pop, risas y God helg!</p>
-        </div>
-        <div class="glass-card reveal">
-          <span class="glass-card__day">Sábado</span>
-          <h3 class="glass-card__title">Dagens ord</h3>
-          <p class="glass-card__text">La palabra del día. Breve, potente, memorable.</p>
-        </div>
-        <div class="glass-card reveal">
-          <span class="glass-card__day">Domingo</span>
-          <h3 class="glass-card__title">Dagbok fra Norge</h3>
-          <p class="glass-card__text">Diario personal desde Noruega. Lo real, sin filtros.</p>
-        </div>
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container container--narrow">
+      <h2 class="section-title reveal">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>¿Necesito saber algo de noruego?</summary>
+          <p>Nada. Empezamos desde cero. Si sabes decir "hei", ya llevas ventaja.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Es gratis de verdad?</summary>
+          <p>La newsletter, la clase y la guía son 100% gratis. Sin trucos. Más adelante hay cursos de pago para quien quiera profundizar.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Un email al día no es mucho?</summary>
+          <p>Son 3-5 minutos de lectura. Si un día no puedes, no pasa nada — ahí sigue esperándote.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿En qué se diferencia de Duolingo?</summary>
+          <p>Duolingo enseña palabras sueltas con un algoritmo. Nosotros te enseñamos el noruego real, en español, desde la experiencia de vivir aquí.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>¿Y si llevo años sin aprender noruego?</summary>
+          <p>Mejor. Ya conoces el contexto — te falta el idioma. Y eso es exactamente lo que hacemos.</p>
+        </details>
       </div>
     </div>
   </section>
 
   <!-- SIGNUP -->
   <section class="signup" id="signup">
-    <div class="signup__inner">
-      <p class="tag reveal">Newsletter gratuita</p>
-      <h2 class="signup__title reveal">
-        Cada semana, un email<br>que te acerca a Noruega
+    <div class="container container--narrow">
+      <h2 class="signup-title reveal">
+        Cada mes que pasa sin empezar es un mes más lejos.<br>
+        <em>El primer paso es un "hei".</em>
       </h2>
-      <p class="signup__desc reveal">
-        Contenido exclusivo que no publico en redes: anécdotas reales, expresiones que no enseña Duolingo y trucos para sonar menos turista. Gratis. Sin spam. <em>Vi snakkes!</em>
-      </p>
-      <form class="signup__form reveal" id="signup-form" action="#" method="POST">
-        <div class="signup__field">
-          <input type="email" name="email" id="email" placeholder="tu@email.com" required autocomplete="email" aria-label="Tu email" />
-          <button type="submit" class="btn btn--primary signup__btn">
-            <span class="signup__btn-text">Suscribirme gratis</span>
-            <span class="signup__btn-loading" hidden>Enviando...</span>
+      <form class="signup-form reveal" id="signup-form" action="#" method="POST">
+        <div class="signup-field">
+          <input type="email" name="email" placeholder="tu@email.com" required autocomplete="email" aria-label="Tu email" />
+          <button type="submit" class="btn btn-primary">
+            <span class="btn-text">Quiero empezar</span>
+            <span class="btn-loading" hidden>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </span>
           </button>
         </div>
-        <p class="signup__note">Solo noruego real. Cero spam. Te puedes dar de baja cuando quieras.</p>
-        <p class="signup__success" id="signup-success" hidden>¡Hei! Ya estás dentro. Revisa tu email — tu primer contenido exclusivo está en camino.</p>
-        <p class="signup__error" id="signup-error" hidden>Algo salió mal. Inténtalo de nuevo.</p>
+        <p class="signup-note">Gratis. Sin spam. Te puedes dar de baja cuando quieras.</p>
+        <p class="signup-success" id="signup-success" hidden>¡Ya estás dentro! Revisa tu email.</p>
+        <p class="signup-error" id="signup-error" hidden>Algo salió mal. Inténtalo de nuevo.</p>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <p class="footer__logo">Hei Norsk<span class="dot">.</span></p>
-          <p class="footer__tagline">Aprende noruego con quien lo vive</p>
-        </div>
-        <div class="footer__links">
-          <a href="https://instagram.com/heinorskonline" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://tiktok.com/@heinorskonline" target="_blank" rel="noopener">TikTok</a>
-          <a href="https://threads.net/@heinorskonline" target="_blank" rel="noopener">Threads</a>
-        </div>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="logo">Hei Norsk<span class="logo-dot">.</span></p>
+        <p class="footer-tagline">Aprende noruego con quien lo vive</p>
       </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">Start med "Hei". Føl deg hjemme.</p>
+      <div class="footer-links">
+        <a href="https://instagram.com/heinorskonline" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://tiktok.com/@heinorskonline" target="_blank" rel="noopener">TikTok</a>
       </div>
+      <p class="footer-close"><em>Start med "Hei". Føl deg hjemme.</em></p>
     </div>
   </footer>
 
